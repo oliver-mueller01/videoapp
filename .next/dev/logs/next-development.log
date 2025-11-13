@@ -1,39 +1,5 @@
-[00:00:00.892] Server  LOG      ✓ Ready in 635ms
-[00:00:03.703] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:03.862] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:03.862] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:03.862] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049319336}
-[00:00:11.142] Server  LOG      ✓ Compiled in 58ms
-[00:00:18.639] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049334101}
-[00:00:38.741] Server  LOG      ✓ Compiled in 29ms
-[00:00:41.866] Server  LOG      ✓ Compiled in 28ms
-[00:00:53.238] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:53.362] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:53.362] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
-[00:00:53.362] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049368836}
-[00:00:57.017] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049372494}
-[00:00:58.141] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhw4yawo0002nymgziciv1c3 color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhw4yawo0002nymgziciv1c3","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049373616}
-[00:01:00.236] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049375702}
-[00:01:01.166] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049376642}
-[00:01:03.303] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049378777}
-[00:01:16.820] Server  LOG      ✓ Compiled in 26ms
-[00:01:17.851] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049393327}
-[00:01:27.436] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049402906}
-[00:01:28.928] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049404403}
-[00:01:30.358] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049405828}
-[00:01:30.973] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049406443}
-[00:01:42.449] Server  LOG      ✓ Compiled in 36ms
-[00:01:46.040] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:46.177] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:46.177] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
-[00:01:46.177] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049421647}
-[00:01:53.622] Server  LOG      ✓ Compiled in 27ms
-[00:02:07.472] Server  LOG      ✓ Compiled in 42ms
-[00:02:10.310] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:10.439] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:02:10.439] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
-[00:02:10.439] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049445913}
-[00:02:14.888] Server  LOG      ✓ Compiled in 30ms
-[00:02:20.427] Server  LOG      ✓ Compiled in 37ms
-[00:02:23.916] Server  LOG      ✓ Compiled in 36ms
-[00:02:29.938] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049465413}
+[00:00:00.957] Server  LOG      ✓ Ready in 700ms
+[00:03:02.924] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:04.073] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:04.073] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:03:04.073] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763050137492}

@@ -476,18 +476,11 @@ function Home() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-background",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "my-10"
-            }, void 0, false, {
-                fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                lineNumber: 43,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$navigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Navigation"], {
                 onMenuToggle: ()=>setSidebarOpen(!sidebarOpen)
             }, void 0, false, {
                 fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                lineNumber: 44,
+                lineNumber: 43,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -503,12 +496,12 @@ function Home() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                            lineNumber: 53,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                        lineNumber: 48,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this),
                     sidebarOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -516,7 +509,7 @@ function Home() {
                         onClick: ()=>setSidebarOpen(false)
                     }, void 0, false, {
                         fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                        lineNumber: 64,
+                        lineNumber: 63,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -532,7 +525,7 @@ function Home() {
                                             children: selectedCreator ? `${selectedCreator} Videos` : "Neuer Content"
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 73,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -540,13 +533,13 @@ function Home() {
                                             children: selectedCreator ? `Alle Videos von ${selectedCreator}` : "Die neusten Videos!"
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                            lineNumber: 77,
+                                            lineNumber: 76,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this),
                                 loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -556,18 +549,18 @@ function Home() {
                                         children: "Loading videos..."
                                     }, void 0, false, {
                                         fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 84,
                                     columnNumber: 15
                                 }, this) : latestVideos.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$video$2d$grid$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["VideoGrid"], {
                                     videos: latestVideos
                                 }, void 0, false, {
                                     fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                    lineNumber: 91,
+                                    lineNumber: 90,
                                     columnNumber: 15
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "text-center py-12",
@@ -576,29 +569,29 @@ function Home() {
                                         children: "No videos available"
                                     }, void 0, false, {
                                         fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 93,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 92,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                            lineNumber: 72,
+                            lineNumber: 71,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                        lineNumber: 71,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/videoapp/videoapp/app/page.tsx",
-                lineNumber: 46,
+                lineNumber: 45,
                 columnNumber: 7
             }, this)
         ]
