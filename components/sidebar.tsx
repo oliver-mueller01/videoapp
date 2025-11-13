@@ -23,7 +23,7 @@ export function Sidebar({ selectedCreator, onCreatorChange }: SidebarProps) {
           className="w-full justify-start text-xs sm:text-sm"
           onClick={() => onCreatorChange(null)}
         >
-          All Channels
+          Alle Kanäle
         </Button>
 
         {CREATORS.map((creator) => (

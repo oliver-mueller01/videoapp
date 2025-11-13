@@ -1,111 +1,39 @@
-[00:00:01.806] Server  LOG      ✓ Ready in 1201ms
-[00:00:09.297] Server  LOG      ○ Compiling / ...
-[00:00:10.659] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:10.861] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:10.861] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:10.861] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972354422}
-[00:00:13.564] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:13.849] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:13.849] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
-[00:00:13.849] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972357419}
-[00:00:25.718] Server  WARN    Error: Route "/api/videos/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:25.739] Server  LOG     prisma:error "\nInvalid `prisma.videoapp_videos.update()` invocation:\n\n{\n  where: {\n    id: undefined,\n?   AND?: videoapp_videosWhereInput | videoapp_videosWhereInput[],\n?   OR?: videoapp_videosWhereInput[],\n?   NOT?: videoapp_videosWhereInput | videoapp_videosWhereInput[],\n?   title?: StringFilter | String,\n?   creator?: StringFilter | String,\n?   videoUrl?: StringFilter | String,\n?   thumbnail?: StringNullableFilter | String | Null,\n?   uploadedAt?: DateTimeFilter | DateTime\n  },\n  data: {\n    id: \"cmhwavxad0000ny4owuicq9ji\",\n    title: \"Butter da Butter\",\n    creator: \"Weazel News\",\n    videoUrl: \"https://cdn.discordapp.com/attachments/1352589917774938143/1436326745937678454/ScreenRecording_11-07-2025_13-06-07_1.mov?ex=6915ca85&is=69147905&hm=10b5ac8993c05d94bae11acdfd87470beca0ed69caeb156f57fa98dec583cecb&\",\n    thumbnail: \"/uploads/thumbnails/1762970113051-ChatGPT Image 10. Sept. 2025, 15_44_29.png\",\n    uploadedAt: \"2025-11-12T17:55:13.093Z\"\n  }\n}\n\nArgument `where` of type videoapp_videosWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?."
-[00:00:25.984] Server  ERROR   Error updating video: PrismaClientValidationError: 
-Invalid `prisma.videoapp_videos.update()` invocation:
-
-{
-  where: {
-    id: undefined,
-?   AND?: videoapp_videosWhereInput | videoapp_videosWhereInput[],
-?   OR?: videoapp_videosWhereInput[],
-?   NOT?: videoapp_videosWhereInput | videoapp_videosWhereInput[],
-?   title?: StringFilter | String,
-?   creator?: StringFilter | String,
-?   videoUrl?: StringFilter | String,
-?   thumbnail?: StringNullableFilter | String | Null,
-?   uploadedAt?: DateTimeFilter | DateTime
-  },
-  data: {
-    id: "cmhwavxad0000ny4owuicq9ji",
-    title: "Butter da Butter",
-    creator: "Weazel News",
-    videoUrl: "https://cdn.discordapp.com/attachments/1352589917774938143/1436326745937678454/ScreenRecording_11-07-2025_13-06-07_1.mov?ex=6915ca85&is=69147905&hm=10b5ac8993c05d94bae11acdfd87470beca0ed69caeb156f57fa98dec583cecb&",
-    thumbnail: "/uploads/thumbnails/1762970113051-ChatGPT Image 10. Sept. 2025, 15_44_29.png",
-    uploadedAt: "2025-11-12T17:55:13.093Z"
-  }
-}
-
-Argument `where` of type videoapp_videosWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
-[00:00:36.433] Server  WARN    Error: Route "/api/videos/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:00:36.444] Server  LOG     prisma:error "\nInvalid `prisma.videoapp_videos.delete()` invocation:\n\n{\n  where: {\n    id: undefined,\n?   AND?: videoapp_videosWhereInput | videoapp_videosWhereInput[],\n?   OR?: videoapp_videosWhereInput[],\n?   NOT?: videoapp_videosWhereInput | videoapp_videosWhereInput[],\n?   title?: StringFilter | String,\n?   creator?: StringFilter | String,\n?   videoUrl?: StringFilter | String,\n?   thumbnail?: StringNullableFilter | String | Null,\n?   uploadedAt?: DateTimeFilter | DateTime\n  }\n}\n\nArgument `where` of type videoapp_videosWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?."
-[00:00:36.688] Server  ERROR   Error deleting video: PrismaClientValidationError: 
-Invalid `prisma.videoapp_videos.delete()` invocation:
-
-{
-  where: {
-    id: undefined,
-?   AND?: videoapp_videosWhereInput | videoapp_videosWhereInput[],
-?   OR?: videoapp_videosWhereInput[],
-?   NOT?: videoapp_videosWhereInput | videoapp_videosWhereInput[],
-?   title?: StringFilter | String,
-?   creator?: StringFilter | String,
-?   videoUrl?: StringFilter | String,
-?   thumbnail?: StringNullableFilter | String | Null,
-?   uploadedAt?: DateTimeFilter | DateTime
-  }
-}
-
-Argument `where` of type videoapp_videosWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
-[00:02:06.242] Server  LOG      ✓ Compiled in 52ms
-[00:02:16.391] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:16.546] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:02:16.546] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
-[00:02:16.546] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972480121}
-[00:02:18.267] Browser LOG     Deleting: cmhwavxad0000ny4owuicq9ji
-[00:02:18.446] Server  WARN    Error: Route "/api/videos/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:02:18.463] Server  LOG     prisma:error "\nInvalid `prisma.videoapp_videos.delete()` invocation:\n\n{\n  where: {\n    id: undefined,\n?   AND?: videoapp_videosWhereInput | videoapp_videosWhereInput[],\n?   OR?: videoapp_videosWhereInput[],\n?   NOT?: videoapp_videosWhereInput | videoapp_videosWhereInput[],\n?   title?: StringFilter | String,\n?   creator?: StringFilter | String,\n?   videoUrl?: StringFilter | String,\n?   thumbnail?: StringNullableFilter | String | Null,\n?   uploadedAt?: DateTimeFilter | DateTime\n  }\n}\n\nArgument `where` of type videoapp_videosWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?."
-[00:02:18.709] Server  ERROR   Error deleting video: PrismaClientValidationError: 
-Invalid `prisma.videoapp_videos.delete()` invocation:
-
-{
-  where: {
-    id: undefined,
-?   AND?: videoapp_videosWhereInput | videoapp_videosWhereInput[],
-?   OR?: videoapp_videosWhereInput[],
-?   NOT?: videoapp_videosWhereInput | videoapp_videosWhereInput[],
-?   title?: StringFilter | String,
-?   creator?: StringFilter | String,
-?   videoUrl?: StringFilter | String,
-?   thumbnail?: StringNullableFilter | String | Null,
-?   uploadedAt?: DateTimeFilter | DateTime
-  }
-}
-
-Argument `where` of type videoapp_videosWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
-[00:03:04.950] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:05.502] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:03:05.502] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
-[00:03:05.502] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972529071}
-[00:03:08.195] Browser LOG     Deleting: cmhw4ehf10000nymgor2wjfjw
-[00:03:11.195] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972534741}
-[00:03:55.354] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:55.868] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:03:55.868] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:03:55.868] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972579439}
-[00:03:57.751] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972581308}
-[00:03:57.992] Browser ERROR   {}
-[00:03:57.992] Browser ERROR   {}
-[00:04:26.715] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:27.146] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:27.146] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
-[00:04:27.146] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972610537}
-[00:04:31.208] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972614735}
-[00:04:34.413] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:34.846] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:34.846] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
-[00:04:34.846] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972618419}
-[00:04:44.929] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:45.338] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:04:45.339] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:04:45.339] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972628894}
-[00:04:46.871] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1762972630425}
+[00:00:00.892] Server  LOG      ✓ Ready in 635ms
+[00:00:03.703] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:03.862] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:03.862] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:03.862] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049319336}
+[00:00:11.142] Server  LOG      ✓ Compiled in 58ms
+[00:00:18.639] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049334101}
+[00:00:38.741] Server  LOG      ✓ Compiled in 29ms
+[00:00:41.866] Server  LOG      ✓ Compiled in 28ms
+[00:00:53.238] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:53.362] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:53.362] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
+[00:00:53.362] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049368836}
+[00:00:57.017] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049372494}
+[00:00:58.141] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhw4yawo0002nymgziciv1c3 color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhw4yawo0002nymgziciv1c3","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049373616}
+[00:01:00.236] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049375702}
+[00:01:01.166] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049376642}
+[00:01:03.303] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049378777}
+[00:01:16.820] Server  LOG      ✓ Compiled in 26ms
+[00:01:17.851] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049393327}
+[00:01:27.436] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049402906}
+[00:01:28.928] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049404403}
+[00:01:30.358] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049405828}
+[00:01:30.973] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049406443}
+[00:01:42.449] Server  LOG      ✓ Compiled in 36ms
+[00:01:46.040] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:46.177] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:46.177] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
+[00:01:46.177] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049421647}
+[00:01:53.622] Server  LOG      ✓ Compiled in 27ms
+[00:02:07.472] Server  LOG      ✓ Compiled in 42ms
+[00:02:10.310] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:10.439] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:10.439] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/video/cmhwavxad0000ny4owuicq9ji","route":"/video/[id]"}
+[00:02:10.439] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji color: rgb(120, 120, 120) color: inherit {"dp":"/video/[id]","o":"http://localhost:3000/video/cmhwavxad0000ny4owuicq9ji","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049445913}
+[00:02:14.888] Server  LOG      ✓ Compiled in 30ms
+[00:02:20.427] Server  LOG      ✓ Compiled in 37ms
+[00:02:23.916] Server  LOG      ✓ Compiled in 36ms
+[00:02:29.938] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763049465413}

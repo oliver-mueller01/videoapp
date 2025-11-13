@@ -10,14 +10,14 @@ interface NavigationProps {
 
 export function Navigation({ onMenuToggle }: NavigationProps) {
   return (
-    <nav className="fixed top-0 w-full bg-card border-b border-border z-50 px-4 sm:px-6 py-4">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center gap-2">
+    <nav className="fixed top-10 w-full bg-card border-b border-border z-50 px-4 sm:px-6 py-4">
+      <div className="flex items-center justify-between max-w-7xl">
+        <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center">
             <span className="text-xs font-bold text-accent-foreground">PT</span>
           </div>
           <h1 className="text-lg sm:text-xl font-bold text-foreground hidden sm:block">PlaceTube</h1>
-        </Link>
+        </div>
 
         <div className="flex items-center gap-3">
           <button

@@ -55,7 +55,7 @@ export default function VideoPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="fixed top-0 w-full bg-card border-b border-border z-50 px-4 sm:px-6 py-4">
+      <div className="fixed top-10 w-full bg-card border-b border-border z-50 px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <ArrowLeft className="w-5 h-5 text-wite" />
@@ -65,7 +65,7 @@ export default function VideoPage() {
         </div>
       </div>
 
-      <div className="pt-20 pb-8 px-4 sm:px-6">
+      <div className="pt-30 pb-8 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="mb-6 sm:mb-8">
             <div className="aspect-video bg-black rounded-lg overflow-hidden mb-6 border border-border">

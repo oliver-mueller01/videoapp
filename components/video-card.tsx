@@ -22,7 +22,7 @@ export function VideoCard({ video }: VideoCardProps) {
     <Link href={`/video/${video.id}`}>
       <div className="group cursor-pointer">
         <div
-          className="relative h-40 sm:h-48 bg-gradient-to-br rounded-lg overflow-hidden border border-border transition-all duration-300"
+  className="relative aspect-video bg-gradient-to-br rounded-lg overflow-hidden border border-border transition-all duration-300"
           style={{
   backgroundImage: video.thumbnail ? `url(${encodeURI(video.thumbnail)})` : undefined,
             backgroundSize: "cover",
