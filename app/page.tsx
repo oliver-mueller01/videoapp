@@ -67,7 +67,7 @@ export default function Home() {
         )}
 
         {/* Main */}
-        <main className="flex-1 overflow-auto w-full">
+        <main className="flex-1 overflow-auto w-full top-4 pt-10">
           <div className="p-4 sm:p-6 md:p-8">
             <div className="mb-6 sm:mb-8">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-2">
