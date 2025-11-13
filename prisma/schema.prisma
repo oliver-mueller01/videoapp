@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model videoapp_videos {
+  id          String   @id @default(cuid())
+  title       String
+  creator     String
+  videoUrl    String
+  thumbnail   String?
+  uploadedAt  DateTime @default(now())
+
+  @@map("videoapp_videos")
+}
