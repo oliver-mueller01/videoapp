@@ -208,6 +208,7 @@ __turbopack_context__.s([
     ()=>AdminPage
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/videoapp/videoapp/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/videoapp/videoapp/node_modules/next-auth/react/index.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/videoapp/videoapp/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/videoapp/videoapp/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/videoapp/videoapp/components/ui/button.tsx [app-ssr] (ecmascript)");
@@ -225,6 +226,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node
 ;
 ;
 ;
+;
+const ALLOWED_DISCORD_IDS = [
+    "360499054188298251"
+];
 const CREATORS = [
     {
         id: "Weazel News",
@@ -318,6 +323,66 @@ function AdminPage() {
         if (res.ok) fetchVideos();
         else alert("Failed to delete");
     };
+    const { data: session, status } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSession"])();
+    if (status === "loading") {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-center mt-20",
+            children: "Checking login…"
+        }, void 0, false, {
+            fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
+            lineNumber: 108,
+            columnNumber: 12
+        }, this);
+    }
+    if (!session) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-screen flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                onClick: ()=>(0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2d$auth$2f$react$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["signIn"])("discord"),
+                className: "px-6 py-3 bg-indigo-600 text-white rounded-xl",
+                children: "Login with Discord"
+            }, void 0, false, {
+                fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
+                lineNumber: 114,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
+            lineNumber: 113,
+            columnNumber: 7
+        }, this);
+    }
+    // 🔍 DEBUG LOG: erscheint in Chrome DevTools
+    console.log("Eingeloggter Discord User:", session.user);
+    console.log("Discord ID:", session.user.id);
+    // 🔒 Allowlist Check
+    if (!ALLOWED_DISCORD_IDS.includes(session.user.id)) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "min-h-screen flex items-center justify-center flex-col gap-3",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-red-600 text-lg font-semibold",
+                    children: "Kein Zugriff Bruder ❌"
+                }, void 0, false, {
+                    fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
+                    lineNumber: 132,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-muted-foreground",
+                    children: "Deine Discord-ID ist nicht whitelisted."
+                }, void 0, false, {
+                    fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
+                    lineNumber: 135,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
+            lineNumber: 131,
+            columnNumber: 7
+        }, this);
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-background",
         children: [
@@ -332,7 +397,7 @@ function AdminPage() {
                             children: "← Back to Videos"
                         }, void 0, false, {
                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -340,25 +405,25 @@ function AdminPage() {
                             children: "Admin Panel"
                         }, void 0, false, {
                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                            lineNumber: 109,
+                            lineNumber: 150,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "w-20"
                         }, void 0, false, {
                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                            lineNumber: 110,
+                            lineNumber: 151,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                    lineNumber: 105,
+                    lineNumber: 146,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                lineNumber: 104,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -372,20 +437,20 @@ function AdminPage() {
                                         children: "Add Video"
                                     }, void 0, false, {
                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 159,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardDescription"], {
                                         children: "Paste your CDN video URL and thumbnail"
                                     }, void 0, false, {
                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                        lineNumber: 119,
+                                        lineNumber: 160,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                lineNumber: 117,
+                                lineNumber: 158,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -399,7 +464,7 @@ function AdminPage() {
                                             placeholder: "Title"
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 164,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -411,12 +476,12 @@ function AdminPage() {
                                                     children: c.name
                                                 }, c.id, false, {
                                                     fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 171,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                            lineNumber: 124,
+                                            lineNumber: 165,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -425,7 +490,7 @@ function AdminPage() {
                                             placeholder: "Video URL"
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 176,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -434,7 +499,7 @@ function AdminPage() {
                                             onChange: (e)=>setThumbnailFile(e.target.files?.[0] || null)
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                            lineNumber: 140,
+                                            lineNumber: 181,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -444,24 +509,24 @@ function AdminPage() {
                                             children: isUploading ? "Uploading..." : "Add Video"
                                         }, void 0, false, {
                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 182,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 163,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                lineNumber: 121,
+                                lineNumber: 162,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                        lineNumber: 116,
+                        lineNumber: 157,
                         columnNumber: 9
                     }, this),
                     successMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -469,7 +534,7 @@ function AdminPage() {
                         children: successMessage
                     }, void 0, false, {
                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                        lineNumber: 150,
+                        lineNumber: 191,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -480,7 +545,7 @@ function AdminPage() {
                                 children: "All Videos"
                             }, void 0, false, {
                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 196,
                                 columnNumber: 11
                             }, this),
                             videos.map((v)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Card"], {
@@ -496,7 +561,7 @@ function AdminPage() {
                                                             } : vid))
                                             }, void 0, false, {
                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                lineNumber: 160,
+                                                lineNumber: 201,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -507,7 +572,7 @@ function AdminPage() {
                                                             } : vid))
                                             }, void 0, false, {
                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                lineNumber: 168,
+                                                lineNumber: 209,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -521,14 +586,14 @@ function AdminPage() {
                                                                 className: "w-4 h-4 mr-1"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                                lineNumber: 178,
+                                                                lineNumber: 219,
                                                                 columnNumber: 23
                                                             }, this),
                                                             " Save"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                        lineNumber: 177,
+                                                        lineNumber: 218,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -540,26 +605,26 @@ function AdminPage() {
                                                                 className: "w-4 h-4 mr-1"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                                lineNumber: 181,
+                                                                lineNumber: 222,
                                                                 columnNumber: 23
                                                             }, this),
                                                             " Cancel"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                        lineNumber: 180,
+                                                        lineNumber: 221,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 217,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 200,
                                         columnNumber: 17
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex items-center justify-between",
@@ -571,7 +636,7 @@ function AdminPage() {
                                                         children: v.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                        lineNumber: 188,
+                                                        lineNumber: 229,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -579,13 +644,13 @@ function AdminPage() {
                                                         children: v.creator
                                                     }, void 0, false, {
                                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                        lineNumber: 189,
+                                                        lineNumber: 230,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                lineNumber: 187,
+                                                lineNumber: 228,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -599,12 +664,12 @@ function AdminPage() {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                            lineNumber: 193,
+                                                            lineNumber: 234,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                        lineNumber: 192,
+                                                        lineNumber: 233,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$videoapp$2f$videoapp$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -618,47 +683,47 @@ function AdminPage() {
                                                             className: "w-4 h-4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                            lineNumber: 198,
+                                                            lineNumber: 239,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                        lineNumber: 195,
+                                                        lineNumber: 236,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                                lineNumber: 191,
+                                                lineNumber: 232,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                        lineNumber: 186,
+                                        lineNumber: 227,
                                         columnNumber: 17
                                     }, this)
                                 }, v.id, false, {
                                     fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                                    lineNumber: 157,
+                                    lineNumber: 198,
                                     columnNumber: 13
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                        lineNumber: 154,
+                        lineNumber: 195,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-                lineNumber: 115,
+                lineNumber: 156,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/videoapp/videoapp/app/admin/page.tsx",
-        lineNumber: 102,
+        lineNumber: 143,
         columnNumber: 5
     }, this);
 }

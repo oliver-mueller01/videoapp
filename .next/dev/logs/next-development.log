@@ -1,19 +1,56 @@
-[00:00:01.893] Server  LOG      ✓ Ready in 1352ms
-[00:00:06.884] Server  LOG      ○ Compiling / ...
-[00:00:07.844] Server  WARN     ⚠ Cross origin request detected from 192.168.2.178 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:07.874] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:08.244] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:08.244] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:08.244] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.2.178:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://192.168.2.178:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763051287048}
-[00:00:28.892] Server  LOG      ✓ Compiled in 90ms
-[00:00:33.826] Server  LOG      ✓ Compiled in 69ms
-[00:01:21.265] Server  LOG      ✓ Compiled in 47ms
-[00:01:24.641] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:24.793] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:24.793] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:24.793] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://192.168.2.178:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://192.168.2.178:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763051363590}
-[00:02:11.161] Server  LOG      ✓ Compiled in 87ms
-[00:02:13.980] Server  LOG      ✓ Compiled in 46ms
-[00:02:20.077] Server  LOG      ✓ Compiled in 54ms
-[00:02:22.629] Server  LOG      ✓ Compiled in 63ms
+[00:00:01.100] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.102] Server  ERROR    ⨯ The file "./middleware.ts" must export a function, either as a default export or as a named "middleware" export.
+This function is what Next.js runs for every request handled by this middleware.
+
+Why this happens:
+- The file exists but doesn't export a function.
+- The export is not a function (e.g., an object or constant).
+- There's a syntax error preventing the export from being recognized.
+
+To fix it:
+- Ensure this file has either a default or "middleware" function export.
+
+Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.316] Server  LOG      ✓ Ready in 1028ms
+[00:00:04.201] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:04.202] Browser LOG     Discord ID: undefined
+[00:00:04.202] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:04.202] Browser LOG     Discord ID: undefined
+[00:00:04.470] Server  LOG      ○ Compiling /admin ...
+[00:00:05.379] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.611] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:05.611] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
+[00:00:05.612] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763318111521}
+[00:00:05.795] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:05.795] Browser LOG     Discord ID: undefined
+[00:00:05.795] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:05.795] Browser LOG     Discord ID: undefined
+[00:00:06.320] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:06.320] Browser LOG     Discord ID: undefined
+[00:00:06.320] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:06.320] Browser LOG     Discord ID: undefined
+[00:00:09.834] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:10.230] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:10.230] Browser LOG     Discord ID: undefined
+[00:00:10.230] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:10.230] Browser LOG     Discord ID: undefined
+[00:00:10.230] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:10.230] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
+[00:00:10.230] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763318116154}
+[00:00:25.571] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.811] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:25.811] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/admin","route":"/admin"}
+[00:00:25.811] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763318131736}
+[00:00:25.952] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","id":"360499054188298251","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:25.952] Browser LOG     Discord ID: 360499054188298251
+[00:00:25.952] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","id":"360499054188298251","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:25.952] Browser LOG     Discord ID: 360499054188298251
+[00:00:45.457] Server  LOG      ✓ Compiled in 48ms
+[00:00:46.280] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","id":"360499054188298251","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:46.280] Browser LOG     Discord ID: 360499054188298251
+[00:00:46.280] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","id":"360499054188298251","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:46.280] Browser LOG     Discord ID: 360499054188298251
+[00:00:47.269] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","id":"360499054188298251","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:47.269] Browser LOG     Discord ID: 360499054188298251
+[00:00:47.269] Browser LOG     Eingeloggter Discord User: {"email":"treason1604@gmail.com","id":"360499054188298251","image":"https://cdn.discordapp.com/avatars/360499054188298251/a3c6f2d82ba6dce376d489109e5f5308.png","name":"olikovski"}
+[00:00:47.269] Browser LOG     Discord ID: 360499054188298251

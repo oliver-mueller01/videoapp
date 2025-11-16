@@ -1,5 +1,5 @@
 "use client"
-
+import { useSession, signIn } from "next-auth/react"
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -15,6 +15,11 @@ interface Video {
   thumbnail?: string
   uploadedAt: string
 }
+
+const ALLOWED_DISCORD_IDS = [
+  "360499054188298251"
+]
+
 
 const CREATORS = [
   { id: "Weazel News", name: "Weazel News Creator" },
@@ -96,6 +101,42 @@ export default function AdminPage() {
     const res = await fetch(`/api/videos/${id}`, { method: "DELETE" })
     if (res.ok) fetchVideos()
     else alert("Failed to delete")
+  }
+  const { data: session, status } = useSession()
+
+  if (status === "loading") {
+    return <p className="text-center mt-20">Checking login…</p>
+  }
+
+  if (!session) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <button
+          onClick={() => signIn("discord")}
+          className="px-6 py-3 bg-indigo-600 text-white rounded-xl"
+        >
+          Login with Discord
+        </button>
+      </div>
+    )
+  }
+
+    // 🔍 DEBUG LOG: erscheint in Chrome DevTools
+  console.log("Eingeloggter Discord User:", session.user)
+  console.log("Discord ID:", session.user.id)
+
+  // 🔒 Allowlist Check
+  if (!ALLOWED_DISCORD_IDS.includes(session.user.id)) {
+    return (
+      <div className="min-h-screen flex items-center justify-center flex-col gap-3">
+        <p className="text-red-600 text-lg font-semibold">
+          Kein Zugriff Bruder ❌
+        </p>
+        <p className="text-muted-foreground">
+          Deine Discord-ID ist nicht whitelisted.
+        </p>
+      </div>
+    )
   }
 
   return (

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///G:/Coding/videoapp/videoapp/app/providers.tsx"],"sourcesContent":["\"use client\"\r\n\r\nimport { SessionProvider } from \"next-auth/react\"\r\n\r\nexport function Providers({ children }: { children: React.ReactNode }) {\r\n  return <SessionProvider>{children}</SessionProvider>\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIO,SAAS,UAAU,EAAE,QAAQ,EAAiC;IACnE,qBAAO,sQAAC,yLAAe;kBAAE;;;;;;AAC3B","debugId":null}}]
+}
